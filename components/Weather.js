@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 import Forecast from './Forecast'
 
+
 export default class Weather extends React.Component {
     constructor(props) {
         super(props);
@@ -37,7 +38,7 @@ export default class Weather extends React.Component {
                  <ImageBackground source={require('./sky.jpg')} style={styles.backdrop}>
                      
                  <View style={{
-                     paddingTop:30,
+                    paddingTop:30,
                     flexDirection: 'column',
                     alignItems: 'stretch',
                     height: 250,
