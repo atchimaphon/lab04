@@ -14,8 +14,11 @@ export default class Forecast extends React.Component{
                 <Text style={styles.property}>Relative humidity : {this.props.humidity}%</Text>
                 <Text style={styles.property}>Highest temperature : {this.props.temp_max} °C</Text>
                 <Text style={styles.property}>Lowest temperature : {this.props.temp_min} °C</Text>
+                
             </View>
+                <Text style={styles.text_name}>3SA04 : 6010110399</Text>
             </View>
+            
         );
     }
 }
@@ -38,6 +41,23 @@ const styles = StyleSheet.create({
     },
     property:{
         fontSize:20,
-    }
+    },
+    text: { 
+        textAlign: 'center', 
+        color: '#4b0082', 
+        fontSize: 20 
+    },
+    text_name: { 
+        textAlign: 'center', 
+        color: 'orange', 
+        fontSize: 20 ,
+        marginTop:15,
+        backgroundColor: '#d3d3d3', 
+        opacity: 0.5, 
+        paddingTop: 10 
+    },
+    bott:{
+        borderRadius: 10
+    } //เส้นโค้ดของขอบ
 
   });
