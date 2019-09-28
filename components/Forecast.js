@@ -7,8 +7,8 @@ export default class Forecast extends React.Component{
         return(
             <View style={styles.container}>
                 <View style={styles.bk}>
-                <Text style={styles.property}>{this.props.location}</Text>
-                <Text style={styles.property}>{this.props.main}</Text>
+                <Text style={styles.property}>{this.props.location}</Text>  
+                <Text style={styles.property}>{this.props.main}</Text>   
                 <Text style={styles.property}>Status : {this.props.description}</Text>
                 <Text style={styles.property}>Temperature : {this.props.temp} °C</Text>
                 <Text style={styles.property}>Relative humidity : {this.props.humidity}%</Text>
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
         marginTop:15,
         backgroundColor: '#d3d3d3', 
         opacity: 0.5, 
-        paddingTop: 10 
+        paddingTop: 10,   
     },
     bott:{
         borderRadius: 10
