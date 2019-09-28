@@ -7,20 +7,19 @@ const availableZipItems = [
     { place: 'Chiangmai', code: '50000' },
     { place: 'Phayao', code: '56130' },
    ]
-   //
    const ZipItem = ({place,code,navigate}) => (
-    <TouchableHighlight onPress={() => navigate('Weather', {zipCode: code})}>
+    <TouchableHighlight onPress={() => navigate('Weather', {ZipCode: code})}>
         <View style={styles.box_opacity}>
         <View style={styles.layout}>
         <View style={styles.box_opacity2}>
         <View style={styles.layout}>
-            <Text style={styles.text2}>Province: </Text>
-            <Text style={styles.text}>{place}       </Text>
+            <Text style={styles.text2}>Province:</Text>
+            <Text style={styles.text}>{place}</Text>
         </View>
         </View>
         <View style={styles.box_opacity2}>
         <View style={styles.layout}>
-            <Text style={styles.text2}>Zip code: </Text>
+            <Text style={styles.text2}>Zip code:</Text>
             <Text style={styles.text}>{code} </Text>
         </View>
         </View>
