@@ -1,24 +1,19 @@
-import React from 'react';
-import { StyleSheet, FlatList, View, Text,TouchableHighlight } from 'react-native';
-import Weather from './Weather'
-import ZipCodeScreen from  './ZipcodeScreen'
+import Weather from "./Weather";
+import React, { Component } from "react";
+import {Button} from"react-native";
 
-export default class WeatherScreen extends React.Component {
+export default class WeatherScreen extends React.Component{
+    
     static navigationOptions = ({navigation}) => {
-        return {
-            headerTitle: (<Text>Weather</Text>),
-        }
+        return{
+            headerTitle: 'Weather', //แสดง Weather ในส่วนheadด้านบน
+            headerRight: <Button title="Change ZIP" onPress={() => {navigation.navigate('ZipCode')}}/> //สร้างปุ่มเพื่อlinKไปยังหน้าzipcode
+        }  
     }
-    render() {
-        const { navigate } = this.props.navigation,getParem('zipCode');
-        return (<Weather zipCode ={zipCode} />) (
-            <View>
-                <FlatList
-                    data={availableZipItems}
-                    keyExtractor={_keyExtractor}
-                    renderItem={({item}) => <ZipItem {...item} navigate={navigate}/>}
-                />
-            </View>
-        );
-    }
+
+    render(){
+        const zipCode = this.props.navigation.getParam('ZipCode')
+        console.log(zipCode);
+                return (<Weather zipCode={zipCode}/>)
+    };
 }
